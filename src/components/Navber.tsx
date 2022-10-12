@@ -6,7 +6,7 @@ import { faHouse, faFilePen, faArrowRightToBracket } from '@fortawesome/free-sol
 
 
 
-const Navber = ({ isAuth }:any) => {
+const Navber = ({ isAuth }:{isAuth: string | null}) => {
   return (
     <nav>
       <Link to="/">

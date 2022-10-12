@@ -6,7 +6,7 @@ import './Home.css';
 const Home = () => {
 
   const [postList, setPostList] = useState<DocumentData>([]);
-  const [reload, setReload] = useState(false);
+  const [reload, setReload] = useState<boolean>(false);
 
   useEffect(() => {
     const getPosts = async () => {

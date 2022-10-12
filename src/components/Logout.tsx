@@ -3,13 +3,13 @@ import React from 'react'
 import { auth } from '../firebase';
 import { useNavigate } from "react-router-dom";
 
-const Logout = ({ setIsAuth }: any) => {
+const Logout = ({ setIsAuth }: {setIsAuth: React.Dispatch<React.SetStateAction<string | null>>}) => {
   const navigate = useNavigate();
   const logout = () => {
     // ログアウト
     signOut(auth).then(() => {
       localStorage.clear();
-      setIsAuth(false);
+      setIsAuth("false");
       navigate("/login");
     });
   };

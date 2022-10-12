@@ -3,13 +3,13 @@ import React from 'react'
 import { auth, provider } from '../firebase';
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ setIsAuth }: any) => {
+const Login = ({ setIsAuth }: {setIsAuth: React.Dispatch<React.SetStateAction<string | null>>}) => {
   const navigate = useNavigate();
   const loginInWithGoogle = () => {
     // Googleでログイン
     signInWithPopup(auth, provider).then((result) => {
       localStorage["isAuth"] = true;
-      setIsAuth(true);
+      setIsAuth("true");
       navigate("/");
     });
 

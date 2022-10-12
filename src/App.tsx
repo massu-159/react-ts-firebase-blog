@@ -8,7 +8,7 @@ import Logout from './components/Logout';
 import Navber from './components/Navber';
 
 function App() {
-  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  const [isAuth, setIsAuth] = useState<string | null>(localStorage.getItem("isAuth"));
 
   return (
     <Router>

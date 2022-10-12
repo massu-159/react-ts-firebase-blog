@@ -4,9 +4,9 @@ import { auth, db } from '../firebase';
 import './CreatePost.css';
 import { useNavigate } from "react-router-dom";
 
-const CreatePost = ({isAuth}:any) => {
-  const [title, setTitle] = useState("");
-  const [postText, setPostText] = useState("");
+const CreatePost = ({ isAuth }: {isAuth: string | null}) => {
+  const [title, setTitle] = useState<string>("");
+  const [postText, setPostText] = useState<string>("");
 
   const navigate = useNavigate();
 
